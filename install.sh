@@ -73,6 +73,6 @@ echo "[!] Updating bashrc"
 source $HOME/.bashrc
 
 echo "[!] Restarting AwesomeWM"
-echo 'awesome.restart()' | awesome-client
+awesome-client 'awesome.restart()'
 
 echo "[!] Successfully installed!"
