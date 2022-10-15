@@ -1,0 +1,2 @@
+xrandr --output Virtual1 --mode 1360x768 --rate 59
+exec awesome
