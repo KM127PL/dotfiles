@@ -92,7 +92,7 @@ manage_menu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
    { "edit config", terminal .. " -x sudo nano $HOME/.config/awesome/rc.lua " },
-   { "logout", "loginctl terminate-user $USER" },
+   { "logout", "loginctl terminate-user $(whoami)" },
    { "shutdown", "shutdown -h +0" },
    { "reboot", "reboot" },
 }
