@@ -54,6 +54,7 @@ sudo cp ./data/profile /etc/profile
 
 echo "[!] Copying lightdm config over"
 sudo cp ./data/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp ./data/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 echo "[!] Enabling lightdm at startup"
 sudo systemctl start lightdm.service
