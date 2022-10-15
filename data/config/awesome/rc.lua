@@ -92,9 +92,10 @@ manage_menu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
    { "edit config", terminal .. " -x sudo nano $HOME/.config/awesome/rc.lua " },
-   { "logout", "loginctl terminate-user $(whoami)" },
-   { "shutdown", "shutdown -h +0" },
-   { "reboot", "reboot" },
+   -- The 3 commands below do not work for now.
+   -- { "logout", "loginctl terminate-user $(whoami)" },
+   -- { "shutdown", "shutdown -h +0" },
+   -- { "reboot", "reboot" },
 }
 
 mymainmenu = awful.menu({ items = { 
