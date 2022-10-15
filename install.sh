@@ -23,7 +23,7 @@ echo "[!] Asking for additional tools"
 read -p "[?] Do you wish to install a screenshotting tool? [Y\\n] " ssChoice
 
 if [ $ssChoice == "y" ]; then
-	git clone https://github.com/denisoster/awesomewm-screenshot.git $XDG_CONFIG_HOME/awesome/.
+	git clone https://github.com/denisoster/awesomewm-screenshot.git $HOME/.config/awesome/.
 	mkdir $HOME/Pictures/
 fi
 
