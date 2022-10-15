@@ -72,4 +72,7 @@ cp ./data/bashrc $HOME/.bashrc
 echo "[!] Updating bashrc"
 source $HOME/.bashrc
 
+echo "[!] Restarting AwesomeWM"
+echo 'awesome.restart()' | awesome-client
+
 echo "[!] Successfully installed!"
