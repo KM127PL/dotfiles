@@ -261,7 +261,6 @@ licenses
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-lightdm-slick-greeter
 linux-api-headers
 linux-firmware
 linux-firmware-whence

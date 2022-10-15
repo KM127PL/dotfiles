@@ -36,4 +36,13 @@ cp ./data/xinitrc /home/$USER/.xinitrc
 echo "[!] Copying kmsystems theme over"
 cp ./data/themes/* /usr/share/awesome/themes/. -r
 
+echo "[!] Copying lightdm config over"
+sudo cp ./data/lightdm.conf /etc/lightdm/lightdm.conf
+
+echo "[!] Copying bashrc over"
+cp ./data/bashrc $HOME/.bashrc
+
+echo "[!] Updating bashrc"
+source $HOME/.bashrc
+
 echo "[!] Successfully installed!"
