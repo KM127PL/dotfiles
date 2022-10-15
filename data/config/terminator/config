@@ -7,8 +7,6 @@
     foreground_color = "#cdd6f4"
     show_titlebar = False
     scrollbar_position = hidden
-    background_darkness = 0.97 #(or anything else between 0-1)
-    background_type = transparent
 [layouts]
   [[default]]
     [[[window0]]]
