@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "[!] Updating to latest script version..."
+
+git pull
+
 if [ "$(id -u)" -eq 0 ]; then
 	echo '[!] This script must not be run by root/sudo!' >&2
 	exit 1
