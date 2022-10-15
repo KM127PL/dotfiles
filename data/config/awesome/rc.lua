@@ -101,7 +101,7 @@ mymainmenu = awful.menu({ items = {
 
 --{ "awesome", myawesomemenu, beautiful.awesome_icon },
 { "manage", manage_menu }, 
-{ "terminal", terminal },
+{ "terminal", terminal .. " -u --working-directory=$HOME " },
 { "firefox", "firefox" },
 { "reload", awesome.restart },
 { "exit", function() awesome.quit() end },
