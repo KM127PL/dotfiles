@@ -46,7 +46,7 @@ echo "[!] Copying kmsystems theme over"
 sudo cp ./data/themes/* /usr/share/awesome/themes/. -r
 
 echo "[!] Copying ps1 over"
-sudo mkdir /etc/profile.d
+sudo mkdir -p /etc/profile.d
 sudo cp ./data/ps1.sh /etc/profile.d/ps1.sh
 
 
