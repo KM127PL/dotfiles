@@ -92,7 +92,7 @@ manage_menu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
    { "edit config", terminal .. " -x sudo nano $HOME/.config/awesome/rc.lua " },
-   { "logout", "loginctl terminate-session $(cat /proc/self/sessionid)" },
+   { "logout", "_logout" },
    -- The 3 commands below do not work for now.
    -- { "shutdown", "shutdown -h +0" },
    -- { "reboot", "reboot" },
