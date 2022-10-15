@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$(id -u)" -eq 0 ]; then
+	echo '[!] This script must not be run by root/sudo!' >&2
+	exit 1
+fi
+
 if [[ "$(uname)" -ne "Linux" ]]; then
 	echo "[!] Not running Linux, exiting without further changes..."
 else
@@ -14,7 +19,7 @@ fi
 echo "[!] Installing packages from ./data/packages.x86_64"
 read -p "[?] Are you sure you want to install these packages? [Y\\n] " pkgChoice
 if [ $pkgChoice == "y" ]; then
-	pacman -S --needed - < ./data/packages.x86_64;
+	sudo pacman -Sy --needed - < ./data/packages.x86_64;
 else
 	echo "[!] Skipping package installation.";
 fi
@@ -28,13 +33,19 @@ if [ $ssChoice == "y" ]; then
 fi
 
 echo "[!] Copying config files for user $USER"
-cp ./data/config /home/$USER/.config -r
+cp ./data/config $HOME/.config -r
 
 echo "[!] Copying xinit config files"
-cp ./data/xinitrc /home/$USER/.xinitrc
+cp ./data/xinitrc $HOME/.xinitrc
 
 echo "[!] Copying kmsystems theme over"
 cp ./data/themes/* /usr/share/awesome/themes/. -r
+
+echo "[!] Copying bashrc config over"
+sudo cp ./data/bash.bashrc /etc/bash.bashrc
+
+echo "[!] Copying profile config over"
+sudo cp ./data/profile /etc/profile
 
 echo "[!] Copying lightdm config over"
 sudo cp ./data/lightdm.conf /etc/lightdm/lightdm.conf
