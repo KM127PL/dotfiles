@@ -1,1 +1,3 @@
 # dotfiles
+
+WM: AwesomeWM

@@ -14,6 +14,10 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
+local screenshot = require("screenshot")
+
+
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -249,7 +253,10 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
-
+    awful.key({ }, "Print", scrot_full,
+              {description = "Take a screenshot of entire screen", group = "screenshot"}),
+    awful.key({ modkey, }, "Print", scrot_selection,
+              {description = "Take a screenshot of selection", group = "screenshot"}),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)

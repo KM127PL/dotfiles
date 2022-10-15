@@ -19,6 +19,14 @@ else
 	echo "[!] Skipping package installation.";
 fi
 
+echo "[!] Asking for additional tools"
+read -p "[?] Do you wish to install a screenshotting tool? [Y\\n] " ssChoice
+
+if [ $ssChoice == "y" ]; then
+	git clone https://github.com/denisoster/awesomewm-screenshot.git $XDG_CONFIG_HOME/awesome/.
+	mkdir $HOME/Pictures/
+fi
+
 echo "[!] Copying config files for user $USER"
 cp ./data/config /home/$USER/.config -r
 
