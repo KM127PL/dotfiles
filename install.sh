@@ -33,7 +33,7 @@ if [ $ssChoice == "y" ]; then
 fi
 
 echo "[!] Copying config files for user $USER"
-cp ./data/config $HOME/.config -r
+cp ./data/config/* $HOME/.config/. -r
 
 echo "[!] Copying xinit config files"
 cp ./data/xinitrc $HOME/.xinitrc
