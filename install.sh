@@ -55,8 +55,14 @@ sudo cp ./data/profile /etc/profile
 echo "[!] Copying lightdm config over"
 sudo cp ./data/lightdm.conf /etc/lightdm/lightdm.conf
 
+echo "[!] Enabling lightdm at startup"
+sudo systemctl start lightdm.service
+sudo systemctl enable lightdm.service
+
+
 echo "[!] Copying bashrc over"
 cp ./data/bashrc $HOME/.bashrc
+
 
 echo "[!] Updating bashrc"
 source $HOME/.bashrc
