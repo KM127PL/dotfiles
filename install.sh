@@ -41,6 +41,11 @@ cp ./data/xinitrc $HOME/.xinitrc
 echo "[!] Copying kmsystems theme over"
 sudo cp ./data/themes/* /usr/share/awesome/themes/. -r
 
+echo "[!] Copying ps1 over"
+sudo mkdir /etc/profile.d
+sudo cp ./data/ps1.sh /etc/profile.d/ps1.sh
+
+
 echo "[!] Copying bashrc config over"
 sudo cp ./data/bash.bashrc /etc/bash.bashrc
 
