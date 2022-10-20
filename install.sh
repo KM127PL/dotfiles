@@ -72,6 +72,11 @@ cp ./data/bashrc $HOME/.bashrc
 echo "[!] Updating bashrc"
 source $HOME/.bashrc
 
+echo "[!] Preventing display from turning off (thanks u/davidj911)"
+xset s off
+xset -dpms
+xset s noblank
+
 echo "[!] Restarting AwesomeWM"
 awesome-client 'awesome.restart()' > /dev/null 2>&1
 echo "[!] Successfully installed!"
